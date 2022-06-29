@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 保证显示区域和精灵图一个模块的大小相同 */
+            width: 140px;
+            height: 140px;
+            background: url(./img/bg.png);
+            /* 要完成精灵动画，steps()必须和精灵图内模块个数相同 */
+            animation: jingling 1s steps(12) infinite;
+        }
+        /* 让精灵图从头走到尾即可 */
+        @keyframes jingling {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1680px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

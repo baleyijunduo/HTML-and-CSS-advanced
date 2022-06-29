@@ -1,0 +1,18 @@
+/* 因为设置宽高的100%是父标签的100%，如果只设置body的高100%那还是为0 */
+html{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    /* 背景链接加上不平铺加上居中 */
+    background:url(./img/f1_1.jpg) no-repeat center;
+    /* 背景大小改为全部占满 */
+    background-size: cover;
+}

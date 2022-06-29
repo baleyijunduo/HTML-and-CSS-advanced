@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         .box{
+             height: 600px;
+             width: 1366px;
+             margin: 50px auto;
+             background-image: url(./img/bg.jpg);
+             /* 超出隐藏 */
+             overflow: hidden;
+         }
+
+         .box::after,
+         .box::before{
+             content: "";
+             float: left;
+            height: 600px;
+            width: 50%;
+            background-image: url(./img/fm.jpg);
+            transition: all 1s;
+         }
+
+         .box::after{
+             /* 不常写，但可以写英文单词 */
+             background-position: right 0;
+         }
+         /* 移动主体是box */
+         .box:hover::before{
+             transform: translateX(-100%);
+         }
+
+         .box:hover::after{
+             transform: translateX(100%);
+         }
+     </style>
+ </head>
+ <body>
+     <div class="box"></div>
+ </body>
+ </html>

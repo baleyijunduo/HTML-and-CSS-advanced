@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cube{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all .5s;
+            /* 3D化子类 */
+            transform-style: preserve-3d;
+        }
+
+        .cube div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+
+        .front{
+            
+            background-color:orange;
+            /* 向前位移200px */
+            transform: translateZ(300px);
+        }
+        
+        .front2{
+            
+            background-color:red;
+            /* 向前位移200px */
+            transform: translateZ(200px);
+            transform: rotateY(90deg);
+        }
+
+        .front3{
+            
+            background-color:blue;
+            /* 向前位移200px */
+            transform: translateZ(100px);
+            transform: rotateY(90deg);
+        }
+
+        .back{
+            background-color: green;
+        }
+
+        .cube:hover{
+            /* 旋转 */
+            transform: rotateY(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="front"></div>
+        <div class="front2"></div>
+        <div class="front3"></div>
+        <div class="back"></div>
+    </div>
+</body>
+</html>

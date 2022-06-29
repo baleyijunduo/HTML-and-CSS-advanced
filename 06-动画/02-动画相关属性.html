@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            animation: change2 .2s infinite;
+        }
+        /* 定义动画 */
+        @keyframes change1 {
+            from{
+                width: 200px;
+            }
+            to{
+                width: 600px;
+            }
+        }
+        /* 另一种定义方式 */
+        @keyframes change2 {
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 800px;
+            }
+            100%{
+                width: 1000px;
+            }
+        }
+        /* 暂停属性一般在hover中使用 */
+        .box:hover{
+            animation-play-state:paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

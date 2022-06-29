@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 900px;
+            border: 1px solid #000;
+        }
+
+        .box img{
+            transition: all 2s;
+        }
+
+        .box img:hover{
+            /* transfrom的复合属性 */
+            /* 平移和旋转的先后顺序不可变，
+            若旋转在先，则xy轴最值改变，平移是根据xy轴，所以造成不规则运动 */
+            transform: translate(600px) rotate(180deg);
+            /* 也不可分成两个transform写，否则会覆盖 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/tyre.png" alt="">
+    </div>
+</body>
+</html>

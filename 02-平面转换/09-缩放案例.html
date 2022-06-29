@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        a{
+            
+            text-decoration: none;
+            color: black;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .box{
+            width: 249px;
+            height: 210px;
+            margin: 50px auto;
+        }
+
+        img{
+            width: 100%;
+        }
+        .pic{
+            position: relative;
+        }
+        .pic::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -29px;
+            margin-left: -29px;
+            /* 要注意transform会被层叠，所以transform一定要写在一起 */
+            /* 写法：transform:translate(-50%,-50%) scale(5); */
+            /* 底下的transform也要改写成transform:translate(-50%,-50%) scale(1) */
+            height: 58px;
+            width: 58px;
+            background-image: url(./img/play.png);
+            transform:scale(5);
+            transition:all 1s;
+            opacity: 0;
+        }
+        /* hover之后可以空格表示后代关系*/
+        /* 就是鼠标放到li上时，pic：：after组件就会变 */
+        li:hover .pic::after{
+            transform:scale(1);
+            opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><a href="#">
+                <div class="pic"><img src="./img/party.jpeg" alt=""></div>
+                <span>【和平精英】“初火”音乐概念篇：四圣决心....</span>
+            </a></li>
+        </ul>
+    </div>
+</body>
+</html>

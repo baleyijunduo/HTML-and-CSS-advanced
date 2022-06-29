@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            /* 侧轴居中对齐 */
+            align-items: center;
+            height: 300px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+
+        .box2{
+            display: flex;
+            /* 子级无高度时，侧轴拉伸 */
+            align-items: stretch;
+            height: 300px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+
+        .box div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box2 div{
+            width: 100px;
+            /* height: 100px; */
+            background-color: pink;
+        }
+
+        .box2 div:nth-child(2){
+            /* 在子标签中添加这个属性可以改变该子标签的侧轴对齐方式 */
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

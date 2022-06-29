@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            height: 300px;
+            width: 300px;
+            margin: 100px auto;
+            border: 2px solid #000;
+        }
+
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 过渡位移 */
+            transition: all 0.5s;
+        }
+
+        .son:hover{
+            /* 位移 */
+            transform: translate(200px,200px);
+            /* 也可以取百分比  百分比取值根据自身尺寸计算*/
+            transform: translate(100%,100%);
+            /* 给一个数就沿着x轴移动 */
+            transform: translate(100%);
+            /* 也可以指定X轴，y轴 */
+            transform: translateY(100%);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+        </div>
+    </div>
+</body>
+</html>

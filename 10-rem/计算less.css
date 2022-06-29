@@ -1,0 +1,10 @@
+/* 用加减乘除计算即可 */
+/* 需要注意除必须带括号 */
+.box {
+  width: 100px;
+  height: 20px;
+}
+.box .son {
+  width: 600px;
+  height: 10px;
+}
